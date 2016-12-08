@@ -43,7 +43,7 @@ for(sm, SMS) {
   GENCODE_FLAGS += -gencode arch=compute_$$sm,code=sm_$$sm
 }
 
-# Location of cuda headers
+# Specify the location to your cuda headers here
 INCLUDEPATH += /usr/include/cuda
 
 # Compiler instruction, add -I in front of each include path
@@ -54,7 +54,6 @@ LIBS += -lcudart
 
 OTHER_FILES += $$CUDA_SOURCES $$CUDA_HEADERS
 
-# Specify the location to your cuda headers here
 
 # As cuda needs to be compiled by a separate compiler, we'll add instructions for qmake to use the separate
 # compiler to compile cuda files and finally compile the object files together
